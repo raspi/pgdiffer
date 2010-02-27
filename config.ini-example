@@ -1,0 +1,51 @@
+; pgdiffer - PostgreSQL diffing tool example INI file
+; $Id$
+
+; Master is the database that all developers use
+; (pg_dump, pg_restore)
+[master]
+; Username for database
+user     = master
+
+; Password for database
+password = master
+
+; Database name
+database = master
+
+; Hostname of database
+host     = 127.0.0.1
+
+; Filename of dump file
+dump     = master.dump
+
+; Filename of schema file
+sql      = master.sql
+
+
+; Dev is your local database what you use for developement
+; (pg_dump, pg_restore)
+[dev]
+; Username for database
+user     = dev
+
+; Password for database
+password = devuser
+
+; Database name
+database = dev
+
+; Filename of dump file
+dump     = dev.dump
+
+; Hostname of database
+host     = 127.0.0.1
+
+; Filename of schema file
+sql      = dev.sql
+
+; Diff is the generated diff between [master] and [dev]
+; (apgdiff)
+[diff]
+; Filename of generated diff file
+filename = diff.sql
